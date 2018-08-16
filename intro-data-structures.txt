@@ -1,0 +1,44 @@
+1.
+a) var peopleLine = ["Vivian", "Ava", "Josh", "Patrick", "Mike"];
+
+b) peopleLine.push("Mary")
+
+c)
+function findPerson(name) {
+  for (var i=0; i<peopleLine.length; i++) {
+      if (peopleLine[i] === name) {
+        return i;
+      }
+  }
+  return -1;
+}
+findPerson("Josh");  // return 2
+
+d)
+findPerson("Emily"); // return -1
+
+e)
+function cutBefore(personCutting, beforePerson) {
+  for (var i=0; i<peopleLine.length; i++) {
+    if (peopleLine[i] === beforePerson) {
+      return peopleLine.splice(i, 0, personCutting);
+    }
+  }
+}
+
+f)
+function removePerson(name) {
+  for (var i=0; i<peopleLine.length; i++) {
+    if (peopleLine[i] === name) {
+      return peopleLine.splice(i, 1);
+    }
+  }
+}
+
+2. A data structure can be used for the products of an eCommerce.
+  The products is a list of SKUs, represented as string.
+  There is a front to the list, as well as a back.
+  When there's a new SKU, place it at the end.
+  When there's a discontinued SKU, remove them from the list.
+
+3. An array data structure can be used for the above model. As the above case in number 1, push() can be used to insert a new SKU and splice() can be used to remove a discontinued SKU.
